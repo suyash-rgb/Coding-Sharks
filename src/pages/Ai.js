@@ -1,21 +1,5 @@
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
+// 
 
-
-// function Ai() {
-//   return (
-//     <>
-//       <div className="Home">
-//         <Navbar />
-//         <h1 className="heading">ai</h1>
-
-//         <Footer />
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Ai;
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -33,7 +17,7 @@ function Ai() {
     setError(null);
 
     try {
-      const apiKey = "AIzaSyC-A5mTlZcmGs73LmWsuMK4fp3elgdzvas"; // Replace with your actual API key
+      const apiKey = "AIzaSyC-A5mTlZcmGs73LmWsuMK4fp3elgdzvas";
       const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
       const response = await fetch(url, {
@@ -71,58 +55,168 @@ function Ai() {
 
   return (
     <>
-      <div className="Home">
+      <div className="Home" style={{ 
+        minHeight: "100vh", 
+        display: "flex", 
+        flexDirection: "column",
+        backgroundColor: "#f8f9fa"
+      }}>
         <Navbar />
-        <h1 className="heading">AI</h1>
+        
+        <div style={{ flex: 1, padding: "20px" }}>
+          <h1 className="heading" style={{ 
+            textAlign: "center", 
+            margin: "30px 0", 
+            color: "rgb(240, 82, 4)",
+            fontSize: "2.5rem",
+            fontWeight: "700"
+          }}>
+            Coding Shark AI
+          </h1>
 
-        <div className="ai-container" style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
-          <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
-            <div style={{ marginBottom: "10px" }}>
-              <textarea
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                placeholder="Ask the AI anything..."
-                style={{ width: "100%", minHeight: "100px", padding: "10px" }}
-                required
-              />
-            </div>
-            <button 
-              type="submit" 
-              disabled={isLoading}
-              style={{ 
-                padding: "10px 20px", 
-                background: "#007bff", 
-                color: "white", 
-                border: "none", 
-                borderRadius: "4px",
-                cursor: "pointer"
-              }}
-            >
-              {isLoading ? "Processing..." : "Ask AI"}
-            </button>
-          </form>
+          <div className="ai-container" style={{ 
+            maxWidth: "800px", 
+            margin: "0 auto", 
+            padding: "30px",
+            backgroundColor: "white",
+            borderRadius: "12px",
+            boxShadow: "0 5px 15px rgba(0, 0, 0, 0.08)"
+          }}>
+            <form onSubmit={handleSubmit} style={{ marginBottom: "30px" }}>
+              <div style={{ marginBottom: "20px" }}>
+                <label style={{ 
+                  display: "block", 
+                  marginBottom: "8px", 
+                  fontWeight: "600",
+                  color: "#333"
+                }}>
+                  Ask Coding Shark AI
+                </label>
+                <textarea
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                  placeholder="Type your question or request here..."
+                  style={{ 
+                    width: "100%", 
+                    minHeight: "150px", 
+                    padding: "15px", 
+                    borderRadius: "8px",
+                    border: "2px solid #e0e0e0",
+                    fontSize: "16px",
+                    fontFamily: "inherit",
+                    resize: "vertical",
+                    transition: "border-color 0.3s ease",
+                    boxSizing: "border-box"
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = "rgb(240, 82, 4)";
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = "#e0e0e0";
+                  }}
+                  required
+                />
+              </div>
+              <button 
+                type="submit" 
+                disabled={isLoading}
+                style={{ 
+                  padding: "12px 28px", 
+                  backgroundColor: isLoading ? "#ccc" : "rgb(240, 82, 4)", 
+                  color: "white", 
+                  border: "none", 
+                  borderRadius: "6px",
+                  cursor: isLoading ? "not-allowed" : "pointer",
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  transition: "all 0.3s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "8px",
+                  margin: "0 auto"
+                }}
+                className="button-hover"
+               
+              >
+                {isLoading ? (
+                  <>
+                    <span>Processing...</span>
+                    <div style={{
+                      width: "16px",
+                      height: "16px",
+                      border: "2px solid transparent ",
+                      borderTop: "2px solid white",
+                      borderRadius: "50%",
+                      animation: "spin 1s linear infinite"
+                    }}></div>
+                  </>
+                ) : (
+                  <>
+                    <span>Ask AI</span>
+                    <i className="fas fa-paper-plane"></i>
+                  </>
+                )}
+              </button>
+            </form>
 
-          {error && (
-            <div style={{ color: "red", marginBottom: "20px" }}>
-              Error: {error}
-            </div>
-          )}
+            {error && (
+              <div style={{ 
+                color: "#e74c3c", 
+                marginBottom: "20px", 
+                padding: "15px",
+                backgroundColor: "#ffeaea",
+                borderRadius: "8px",
+                border: "1px solid #ffcdd2"
+              }}>
+                <strong>Error:</strong> {error}
+              </div>
+            )}
 
-          {response && (
-            <div className="ai-response" style={{ 
-              background: "#f5f5f5", 
-              padding: "20px", 
-              borderRadius: "4px",
-              whiteSpace: "pre-wrap"
-            }}>
-              <h3>AI Response:</h3>
-              <p>{response}</p>
-            </div>
-          )}
+            {response && (
+              <div className="ai-response" style={{ 
+                backgroundColor: "#f8f9fa", 
+                padding: "25px", 
+                borderRadius: "8px",
+                whiteSpace: "pre-wrap",
+                border: "1px solid #e0e0e0"
+              }}>
+                <h3 style={{ 
+                  marginTop: "0", 
+                  color: "rgb(240, 82, 4)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px"
+                }}>
+                  <i className="fas fa-robot" style={{ fontSize: "1.2em" }}></i>
+                  AI Response:
+                </h3>
+                <p style={{ 
+                  margin: "0", 
+                  lineHeight: "1.6",
+                  color: "#333",
+                  fontSize: "16px"
+                }}>{response}</p>
+              </div>
+            )}
+          </div>
         </div>
 
         <Footer />
       </div>
+
+      <style>
+        {`
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .button-hover:hover {
+    background-color:rgba(240, 82, 4,0.9) !important;
+  }
+
+`}
+      </style>
     </>
   );
 }

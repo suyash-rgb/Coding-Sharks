@@ -50,7 +50,7 @@ function Switchjs9() {
       <Navbar />
       
       <main style={{ flex: 1, padding: isMobile ? '0.5rem' : '1.5rem', marginTop: isMobile ? '0.5rem' : '1rem' }}>
-        <h1 className="page-title" style={{ fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '1rem' }}>
+        <h1 className="page-title" style={{ fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '1rem', color: "rgb(240, 82, 4)" }}>
           JavaScript Learning Hub
         </h1>
         
@@ -108,9 +108,6 @@ function Switchjs9() {
                       alignItems: 'center'
                     }}
                   >
-                    <div className="sublink-icon" style={{ marginRight: '0.75rem' }}>
-                      {linkIndex === activeLink ? '🔵' : '⚪'}
-                    </div>
                     <div className="sublink-content" style={{ flex: 1 }}>
                       <h4 style={{ margin: 0, fontSize: '1rem' }}>{link.text}</h4>
                       <p className="sublink-preview" style={{ 
@@ -143,16 +140,12 @@ function Switchjs9() {
               }}>
                 <div className="content-header" style={{ marginBottom: '1rem' }}>
                   <h2 style={{ margin: 0, fontSize: '1.25rem' }}>
-                    <a 
-                      href={allCards[activeCard].links[activeLink].url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="content-title-link"
-                      style={{ color: '#1976d2', textDecoration: 'none' }}
-                    >
+                    <span
+                      style={{ color: 'rgb(240, 82, 4)', textDecoration: 'none', cursor: 'pointer' }}
+                     
+                    > 
                       {allCards[activeCard].links[activeLink].text}
-                      <span className="external-link-icon" style={{ marginLeft: '0.5rem' }}>↗</span>
-                    </a>
+                    </span>
                   </h2>
                   <div className="content-meta" style={{ 
                     display: 'flex',

@@ -62,11 +62,10 @@
 
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css'; 
-import logo from "../Images/apoliums-removebg-preview.png";
+import logo from "../Images/logo.png";
 import address from "../Images/address_icon.png";
 import email from "../Images/email.png";
 import phone from "../Images/phone.png";
-import {jscompiler} from "../pages/jscompiler";
 
 const Footer = () => {
   return (
@@ -81,7 +80,7 @@ const Footer = () => {
                 alt="Apoliums Logo"
                 className="footer-logo"
               />
-              <p className="company-name">APOLIUMS INFOTECH INDIA PRIVATE LIMITED</p>
+              <p className="company-name">We'll help you to become job-ready. Learn from coders, not tutors.</p>
             </div>
           </Col>
           
@@ -116,7 +115,7 @@ const Footer = () => {
         <Row>
           <Col className="footer-bottom">
             <div className="copyright-text">
-              © {new Date().getFullYear()} Apoliums Infotech India Pvt. Ltd. • Built with pride in India.
+              © {new Date().getFullYear()} Coding Shark Training Institute • Turning Ideas into Code
             </div>
           </Col>
         </Row>

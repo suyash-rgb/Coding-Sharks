@@ -1,5 +1,5 @@
 .image {
-    width: 90%; /* Changed from 100% to 90% */
+    width: 50%; /* Changed from 100% to 90% */
     max-width: 1000px; /* Reduced from 1200px to make it smaller */
     height: auto;
     display: block;
@@ -26,31 +26,8 @@
   }
 
   .heading{
-    color: rgb(173, 18, 18);
+    color: rgb(240 82 4);
     text-align: center;
+    margin-top: 35px;
+    
   }
-
-/* .image {
-    width: 100%;
-    max-width: 1200px; 
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px; 
-}
-  
- 
-  @media (max-width: 768px) {
-    .image {
-      max-width: 95%; 
-      margin: 20px auto;
-    }
-  }
-  
-  
-  @media (max-width: 480px) {
-    .image {
-      max-width: 100%; 
-      border-radius: 0; 
-    }
-  } */

@@ -309,7 +309,7 @@
     },
 
     {
-      "heading": "Bitwise Operator",
+      "heading": "JavaScript Core",
       "links": [
         {
           "text": "Closures and Callbacks",
@@ -585,7 +585,7 @@
     },
 
     {
-      "heading": "Ternary Operator",
+      "heading": "Frontend Frameworks",
       "links": [
         {
           "text": "Frontend Framework",
@@ -869,7 +869,7 @@
     },
 
     {
-      "heading": "Switch case",
+      "heading": "Node.js",
       "links": [
         {
           "text": "Introduction to Node.js",
@@ -1142,7 +1142,7 @@
     },
 
     {
-      "heading": "Loop/Iteration",
+      "heading": "Full-Stack Architecture",
       "links": [
         {
           "text": "Integrating Frontend & Backend",

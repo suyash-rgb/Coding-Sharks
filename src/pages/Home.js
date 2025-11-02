@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
-import image from "../Images/banner1.jpg";
+import front from "../Images/front.png"
 import programmingData from "../data/data.json"; // Import JSON
 import "../pages/Home.css";
 
@@ -11,7 +11,7 @@ function Home() {
     <>
       <div className="Home">
         <Navbar />
-        <img src={image} alt="JavaScript concepts" className="image" />
+        <img src={front} alt="JavaScript concepts" className="image" />
         <h1 className="heading">Javascript programming examples, exercises and solutions for beginners</h1>
         <div className="cards-container">
           {programmingData.cards.map((card, index) => (

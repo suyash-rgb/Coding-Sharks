@@ -47,24 +47,24 @@ function Ternary3() {
   return (
     <div className="fundamentals-page" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
-      
+
       <main style={{ flex: 1, padding: isMobile ? '0.5rem' : '1.5rem', marginTop: isMobile ? '0.5rem' : '1rem' }}>
-        <h1 className="page-title" style={{ fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '1rem' }}>
+        <h1 className="page-title" style={{ fontSize: isMobile ? '1.5rem' : '2rem', marginBottom: '1rem', color: "rgb(240, 82, 4)" }}>
           JavaScript Learning Hub
         </h1>
-        
-        <div className="content-container" style={{ 
-          display: 'flex', 
-          flexDirection: isMobile ? 'column' : 'row', 
+
+        <div className="content-container" style={{
+          display: 'flex',
+          flexDirection: isMobile ? 'column' : 'row',
           gap: isMobile ? '0.5rem' : '1.5rem'
         }}>
           {isMobile && (
-            <button 
+            <button
               className="sidebar-toggle"
               onClick={() => setSidebarOpen(!sidebarOpen)}
               aria-label="Toggle sidebar"
               style={{
-                marginTop:'30px',
+                marginTop: '30px',
                 padding: '0.5rem',
                 marginBottom: '30px',
                 background: '#A7C7E7',
@@ -75,7 +75,7 @@ function Ternary3() {
               {sidebarOpen ? '✕ Close' : '☰ Menu'}
             </button>
           )}
-          
+
           <div className={`sidebar ${sidebarOpen ? 'open' : ''}`} style={{
             width: isMobile ? '100%' : '300px',
             flexShrink: 0,
@@ -84,14 +84,14 @@ function Ternary3() {
             overflowY: 'auto',
             marginBottom: isMobile ? '0.5rem' : '0'
           }}>
-            <h2 className="sidebar-title" style={{ 
-              fontSize: '1.2rem', 
+            <h2 className="sidebar-title" style={{
+              fontSize: '1.2rem',
               padding: '0.5rem',
               marginBottom: '0.5rem'
             }}>
               Topics
             </h2>
-            
+
             <div className="sidebar-content" style={{ maxHeight: isMobile ? '60vh' : 'none', overflowY: 'auto' }}>
               <div className="sublinks-items">
                 {allCards[activeCard !== null ? activeCard : 0].links.map((link, linkIndex) => (
@@ -107,12 +107,9 @@ function Ternary3() {
                       alignItems: 'center'
                     }}
                   >
-                    <div className="sublink-icon" style={{ marginRight: '0.75rem' }}>
-                      {linkIndex === activeLink ? '🔵' : '⚪'}
-                    </div>
                     <div className="sublink-content" style={{ flex: 1 }}>
                       <h4 style={{ margin: 0, fontSize: '1rem' }}>{link.text}</h4>
-                      <p className="sublink-preview" style={{ 
+                      <p className="sublink-preview" style={{
                         margin: '0.25rem 0 0',
                         fontSize: '0.8rem',
                         color: '#666'
@@ -126,34 +123,30 @@ function Ternary3() {
               </div>
             </div>
           </div>
-          
+
           {/* Main Content */}
-          <div className="main-content" style={{ 
+          <div className="main-content" style={{
             flex: 1,
             minHeight: isMobile ? 'auto' : 'calc(100vh - 200px)',
             overflowY: 'auto'
           }}>
             {activeCard !== null && activeLink !== null ? (
-              <div className="content-card" style={{ 
+              <div className="content-card" style={{
                 background: '#fff',
                 borderRadius: '8px',
                 padding: '1rem',
                 boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
               }}>
                 <div className="content-header" style={{ marginBottom: '1rem' }}>
-                  <h2 style={{ margin: 0, fontSize: '1.25rem' }}>
-                    <a 
-                      href={allCards[activeCard].links[activeLink].url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="content-title-link"
-                      style={{ color: '#1976d2', textDecoration: 'none' }}
-                    >
+                   <h2 style={{ margin: 0, fontSize: '1.25rem' }}>
+                    <span
+                      style={{ color: 'rgb(240, 82, 4)', textDecoration: 'none', cursor: 'pointer' }}
+                     
+                    > 
                       {allCards[activeCard].links[activeLink].text}
-                      <span className="external-link-icon" style={{ marginLeft: '0.5rem' }}>↗</span>
-                    </a>
+                    </span>
                   </h2>
-                  <div className="content-meta" style={{ 
+                  <div className="content-meta" style={{
                     display: 'flex',
                     gap: '1rem',
                     marginTop: '0.5rem',
@@ -164,19 +157,19 @@ function Ternary3() {
                     <span className="content-difficulty">Beginner</span>
                   </div>
                 </div>
-                
+
                 <div className="content-body">
                   <p className="content-description" style={{ marginBottom: '1rem' }}>
                     {allCards[activeCard].links[activeLink].pageContent.description}
                   </p>
-                  
+
                   {allCards[activeCard].links[activeLink].pageContent.title1 && (
                     <section className="content-section" style={{ marginBottom: '1.5rem' }}>
                       <div className="section-header" style={{ marginBottom: '0.75rem' }}>
                         <h3 style={{ margin: 0, fontSize: '1.1rem' }}>
                           {allCards[activeCard].links[activeLink].pageContent.title1}
                         </h3>
-                        <div className="section-divider" style={{ 
+                        <div className="section-divider" style={{
                           height: '1px',
                           background: '#eee',
                           margin: '0.5rem 0'
@@ -186,12 +179,12 @@ function Ternary3() {
                         {allCards[activeCard].links[activeLink].pageContent.para1}
                       </p>
                       {allCards[activeCard].links[activeLink].pageContent.code1 && (
-                        <div className="code-container" style={{ 
+                        <div className="code-container" style={{
                           background: '#f5f5f5',
                           borderRadius: '4px',
                           marginBottom: '1rem'
                         }}>
-                          <div className="code-header" style={{ 
+                          <div className="code-header" style={{
                             display: 'flex',
                             justifyContent: 'space-between',
                             alignItems: 'center',
@@ -201,7 +194,7 @@ function Ternary3() {
                             borderTopRightRadius: '4px'
                           }}>
                             <span className="code-language" style={{ fontSize: '0.8rem' }}>JavaScript</span>
-                            <button 
+                            <button
                               className={`copy-button ${copied ? 'copied' : ''}`}
                               onClick={() => copyToClipboard(allCards[activeCard].links[activeLink].pageContent.code1)}
                               style={{
@@ -217,7 +210,7 @@ function Ternary3() {
                               {copied ? 'Copied!' : 'Copy'}
                             </button>
                           </div>
-                          <pre style={{ 
+                          <pre style={{
                             margin: 0,
                             padding: '1rem',
                             overflowX: 'auto',
@@ -232,7 +225,7 @@ function Ternary3() {
                 </div>
               </div>
             ) : (
-              <div className="welcome-message" style={{ 
+              <div className="welcome-message" style={{
                 textAlign: 'center',
                 padding: '2rem',
                 background: '#fff',
@@ -240,7 +233,7 @@ function Ternary3() {
                 boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
               }}>
                 <div className="welcome-illustration" style={{ marginBottom: '1rem' }}>
-                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{ 
+                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style={{
                     width: '150px',
                     height: '150px'
                   }}>
@@ -253,7 +246,7 @@ function Ternary3() {
                 <h2 style={{ marginBottom: '0.5rem' }}>Welcome to JavaScript Learning Hub</h2>
                 <p style={{ marginBottom: '1rem' }}>Select a category from the sidebar to begin your learning journey!</p>
                 {isMobile && (
-                  <button 
+                  <button
                     className="explore-button"
                     onClick={() => setSidebarOpen(true)}
                     style={{
@@ -273,9 +266,9 @@ function Ternary3() {
           </div>
         </div>
       </main>
-      <Compiler/>
+      <Compiler />
       <Footer />
-     
+
     </div>
   );
 }
