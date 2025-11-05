@@ -1,6 +1,3 @@
-// 
-
-
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -17,7 +14,7 @@ function Ai() {
     setError(null);
 
     try {
-      const apiKey = "AIzaSyC-A5mTlZcmGs73LmWsuMK4fp3elgdzvas";
+      const apiKey = "AIzaSyC-VvXBrdxG237STr64UMaGu1lk8QiS3ig";
       const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
       const response = await fetch(url, {
