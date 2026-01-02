@@ -168,7 +168,7 @@ function About() {
                 <div className="contact-detail">
                   <i className="fas fa-map-marker-alt"></i>
                   <div>
-                    <h4>Location</h4>
+                    <h4>Visit Us</h4>
                     <p>Orange Business Park, 110, Bhawarkua Main Rd, Indore, Madhya Pradesh 452001</p>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ function About() {
                   <i className="fas fa-globe"></i>
                   <div>
                     <h4>Online</h4>
-                    <p>Learn anytime, anywhere with our online platform</p>
+                    <p>Learn anytime, anywhere with our LMS</p>
                   </div>
                 </div>
               </div>
