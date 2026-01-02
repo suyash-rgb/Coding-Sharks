@@ -43,3 +43,23 @@ The repository supports customization for different learning workflows:
 COMPILER_TIMEOUT=30
 ENABLE_AI_HELPER=true
 API_KEY=your_api_key_here
+
+## Requirements
+
+Before installing and running **JS Mentor**, make sure your environment meets the following prerequisites:
+
+### Core Requirements
+- **Node.js**: Version 16 or higher (recommended for modern JavaScript features and stability).
+- **npm** (comes with Node.js) or **Yarn**: Latest version recommended for package management.
+- **Git**: For cloning the repository and version control.
+- **Code Editor**: A modern editor such as [Visual Studio Code](https://code.visualstudio.com/) for best developer experience.
+
+### Optional / Advanced Tools
+- **Docker**: Useful if you want to run JS Mentor inside a containerized environment.
+- **Database**: PostgreSQL or MongoDB, if you plan to enable persistent storage or advanced LMS features.
+- **Python**: Required only if you intend to run certain challenge scripts or integrations.
+- **CI/CD Tools**: GitHub Actions or other pipelines for automated testing and deployment.
+
+### Recommended Setup
+- A stable internet connection (for AI helper and online compiler features).
+- Browser: Latest version of Chrome, Firefox, or Edge for optimal performance.
