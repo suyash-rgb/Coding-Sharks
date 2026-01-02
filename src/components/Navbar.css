@@ -34,6 +34,7 @@
 
 .nav-links-container {
     gap: 1.8rem;
+    margin-right: 2rem;
 }
 
 .nav-link {
