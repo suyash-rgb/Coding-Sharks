@@ -65,7 +65,7 @@ import './Footer.css';
 import logo from "../Images/logo.png";
 import address from "../Images/address_icon.png";
 import email from "../Images/email.png";
-import phone from "../Images/phone.png";
+// import phone from "../Images/phone.png";
 
 const Footer = () => {
   return (
@@ -89,16 +89,16 @@ const Footer = () => {
             <ul className="contact-list">
               <li className="contact-item">
                 <img width="16" src={address} alt="Address" className="contact-icon" />
-                <span>Orange business park, 110, Bhawarkua Main Rd, above MacDonald, Sindhi Colony, Indore, Madhya Pradesh 452001</span>
+                <span>Orange business park, 110, Bhawarkua Main Rd, Indore, Madhya Pradesh 452001</span>
               </li>
               <li className="contact-item">
                 <img width="16" src={email} alt="Email" className="contact-icon" />
-                <span>Email: pradeep.mp09@gmail.com</span>
+                <span>Email: </span>
               </li>
-              <li className="contact-item">
+              {/* <li className="contact-item">
                 <img width="16" src={phone} alt="Phone" className="contact-icon" />
-                <span>Phone: 9424586286 </span>
-              </li>
+                <span>Phone:  </span>
+              </li> */}
             </ul>
           </Col>
           
