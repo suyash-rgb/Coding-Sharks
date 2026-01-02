@@ -17,9 +17,9 @@ const Footer = () => {
                 width="180px"
                 src={logo}
                 alt="Apoliums Logo"
-                className="footer-logo"
+                className="footer-logo" 
               />
-              <p className="company-name">We'll help you to become job-ready. Learn from coders, not tutors.</p>
+              <p className="company-name">We'll help you to become job-ready. Learn from actual coders, not just tutors.</p>
             </div>
           </Col>
           
