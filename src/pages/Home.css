@@ -1,25 +1,25 @@
 .image {
-    width: 50%; /* Changed from 100% to 90% */
-    max-width: 1000px; /* Reduced from 1200px to make it smaller */
+    width: 35%; /* Reduced from 50% for smaller image */
+    max-width: 600px; /* Reduced from 1000px */
     height: auto;
     display: block;
-    margin: 20px auto; /* Added some vertical margin */
+    margin: 10px auto; /* Reduced vertical margin */
     border-radius: 8px;
   }
   
   /* Optional: Add some responsive spacing */
   @media (max-width: 768px) { 
     .image {
-      width: 85%; /* Slightly more width on tablets */
-      max-width: 90%; /* More flexible on medium screens */
-      margin: 15px auto;
+      width: 60%; /* Slightly more width on tablets */
+      max-width: 70%; /* More flexible on medium screens */
+      margin: 10px auto;
     }
   }
   
   /* For very small screens */
   @media (max-width: 480px) {
     .image {
-      width: 95%; /* Almost full width on mobile */
+      width: 80%; /* Almost full width on mobile */
       max-width: 100%;
       border-radius: 4px; /* Smaller border radius on mobile */
     }
