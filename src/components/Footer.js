@@ -1,68 +1,7 @@
-// import React from 'react';
-// import { Container, Row, Col } from 'react-bootstrap';
-// import './Footer.css'; 
-// import logo from "../Images/apoliums-removebg-preview.png";
-// import address from "../Images/address_icon.png";
-// import email from "../Images/email.png";
-// import phone from "../Images/phone.png";
-
-// const Footer = () => {
-//   return (
-//     <footer className="footer-container">
-//       <Container>
-//         <Row>
-//           <Col md={4} className="section1">
-//             <img
-//               width="200px"
-//               src={logo}
-//               alt="Apoliums Logo"
-//             />
-//             <div className="h6">
-//               <h6>APOLIUMS INFOTECH INDIA PRIVATE LIMITED</h6>
-//             </div>
-//           </Col>
-//           <Col md={4} className="section2">
-//             <h4 className="address">Address</h4>
-//             <h6>
-//               <img
-//                 width="20px"
-//                 src={address}
-//                 alt="Address Icon"
-//               />
-//               Orange business park, 110, Bhawarkua Main Rd, above MacDonald,
-//               Sindhi Colony, Indore, Madhya Pradesh 452001
-//             </h6>
-//           </Col>
-//           <Col md={4} className="section3">
-//             <h4 className="contact">Contact Details</h4>
-//             <h6>
-//               <img width="20" src={email} alt="Email Icon" />
-//               Email: pradeep.mp09@gmail.com
-//             </h6>
-//             <h6>
-//               <img width="20" src={phone} alt="Phone Icon" />
-//               Phone:
-//             </h6>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Col className="text-center">
-//             <h6 className="copyright">
-//               © 2024 Apoliums • Built within India.
-//             </h6>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
-
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css'; 
-import logo from "../Images/logo.png";
+import logo from "../Images/JsMentorLogo.png";
 import address from "../Images/address_icon.png";
 import email from "../Images/email.png";
 // import phone from "../Images/phone.png";
@@ -93,7 +32,7 @@ const Footer = () => {
               </li>
               <li className="contact-item">
                 <img width="16" src={email} alt="Email" className="contact-icon" />
-                <span>Email: </span>
+                <span>Email: chetanyaa004@gmail.com</span>
               </li>
               {/* <li className="contact-item">
                 <img width="16" src={phone} alt="Phone" className="contact-icon" />
@@ -115,7 +54,7 @@ const Footer = () => {
         <Row>
           <Col className="footer-bottom">
             <div className="copyright-text">
-              © {new Date().getFullYear()} Coding Shark Training Institute • Turning Ideas into Code
+              © {new Date().getFullYear()} Js Mentor Training Institute • Turning Ideas into Code
             </div>
           </Col>
         </Row>

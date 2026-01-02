@@ -14,8 +14,8 @@ function Ai() {
     setError(null);
 
     try {
-      const apiKey = "AIzaSyC-VvXBrdxG237STr64UMaGu1lk8QiS3ig";
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+      const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
+      const url = `${process.env.REACT_APP_GEMINI_API_URL}?key=${apiKey}`;
 
       const response = await fetch(url, {
         method: "POST",

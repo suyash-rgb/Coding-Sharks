@@ -2,7 +2,7 @@
 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../Images/logo.png';
+import logo from '../Images/JsMentorLogo.png';
 import "./Navbar.css";
 
 const NavbarComponent = () => {
@@ -14,7 +14,7 @@ const NavbarComponent = () => {
                     <img
                         src={logo}
                         width="180"
-                        height="60"
+                        height="100"
                         className="logo"
                         alt="Company Logo"
                     />
