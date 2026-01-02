@@ -1,1 +1,2 @@
-# Coding Sharks
+# JS Mentor
+
