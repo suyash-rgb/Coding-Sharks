@@ -47,6 +47,7 @@ const Footer = () => {
               <li><a href="/">Fundamental</a></li>
               <li><a href="/jscompiler">JS Compiler</a></li>
               <li><a href="/Ai">AI</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </Col>
         </Row>

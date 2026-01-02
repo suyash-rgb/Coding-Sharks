@@ -38,6 +38,9 @@ const NavbarComponent = () => {
                         <Nav.Link href="/Ai" className="nav-link">
                             AI
                         </Nav.Link>
+                        <Nav.Link href="/about" className="nav-link">
+                            About
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

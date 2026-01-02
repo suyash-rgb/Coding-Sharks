@@ -63,6 +63,7 @@ import Sixth9 from '../pages/69';
 import Sixth10 from '../pages/610';
 import JSCompiler from '../pages/jscompiler';
 import Ai from '../pages/Ai';
+import About from '../pages/About';
 function AppRouter() {
 
 
@@ -74,6 +75,7 @@ function AppRouter() {
                 <Route path="/" element={<Home />} />
                 <Route path="/jscompiler" element={<JSCompiler />} />
                 <Route path="/Ai" element={<Ai />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/js" element={<Fundamentals />} />
                 <Route path="/jsb" element={<Fundamentals2 />} />
                 <Route path="/sue" element={<Fundamentals3 />} />
