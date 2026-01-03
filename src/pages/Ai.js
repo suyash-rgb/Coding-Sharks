@@ -64,12 +64,12 @@ function Ai() {
         // If NOT JavaScript related, show generic response
         setResponse(
           "I can only help you with your doubts regarding JavaScript! 🚀\n\n" +
-          "You can ask me questions about:\n" +
-          "• JavaScript fundamentals (variables, loops, functions, etc.)\n" +
-          "• ES6+ features and modern JavaScript\n" +
-          "• React, Node.js, and JavaScript frameworks\n" +
-          "• Debugging and troubleshooting JavaScript code\n" +
-          "• Best practices and coding patterns\n\n" +
+          "You can ask me questions about:\n\n" +
+          "- JavaScript fundamentals (variables, loops, functions, etc.)\n" +
+          "- ES6+ features and modern JavaScript\n" +
+          "- React, Node.js, and JavaScript frameworks\n" +
+          "- Debugging and troubleshooting JavaScript code\n" +
+          "- Best practices and coding patterns\n\n" +
           "Feel free to ask any JavaScript-related questions! I will be happy to assist you. 😊"
         );
         setIsLoading(false);
