@@ -19,10 +19,10 @@ function Ai() {
   const checkIfJavaScriptRelated = async (text) => {
     try {
       const apiKey = process.env.REACT_APP_GROK_API_KEY;
-      const url = "https://api.groq.com/openai/v1/responses";
+      const url = process.env.REACT_APP_GROK_API_URL;
 
       const response = await axios.post(url, {
-        model: "openai/gpt-oss-20b",
+        model: process.env.REACT_APP_GROK_MODEL,
         input: `Determine if the following question is related to JavaScript programming (including frameworks like React, Node.js, TypeScript, etc.). Reply with only "YES" or "NO".\n\nQuestion: ${text}`,
       }, {
         headers: {
@@ -78,10 +78,10 @@ function Ai() {
 
       // If JavaScript related, ask the API
       const apiKey = process.env.REACT_APP_GROK_API_KEY;
-      const url = "https://api.groq.com/openai/v1/responses";
+      const url = process.env.REACT_APP_GROK_API_URL;
 
       const response = await axios.post(url, {
-        model: "openai/gpt-oss-20b",
+        model: process.env.REACT_APP_GROK_MODEL,
         input: `You are a JavaScript expert assistant. Answer the following JavaScript-related question clearly and helpfully:\n\n${inputText}`,
       }, {
         headers: {
